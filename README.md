@@ -2,10 +2,16 @@
 
 A responsive and user-friendly Weather Application built using HTML, CSS, and JavaScript, which provides real-time weather updates using the OpenWeather API.
 
+
+
+
 🚀 Live Demo
 
 🔗 Live Website:
 👉 https://sunilkumardhanisetti.github.io/weather-app/
+
+
+
 
 📌 Features
 
@@ -27,6 +33,9 @@ A responsive and user-friendly Weather Application built using HTML, CSS, and Ja
 
 🧩 Clean UI with separate cards for better readability
 
+
+
+
 🛠️ Technologies Used
 
 HTML5 – Structure
@@ -37,6 +46,10 @@ JavaScript (ES6) – Logic & API handling
 
 OpenWeather API – Weather data
 
+
+
+
+
 📁 Project Structure
 weather-app/
 │
@@ -45,6 +58,11 @@ weather-app/
 │   └── style.css
 └── js/
     └── script.js
+
+
+
+
+    
 
 ⚙️ How It Works
 
