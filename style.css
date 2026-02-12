@@ -1,0 +1,133 @@
+body{
+      font-family: Arial, sans-serif;
+      background:#f4f6f8;
+      min-height:100vh;
+      margin:0;
+      transition: background 0.5s ease;
+    }
+
+    /* APP GRID */
+    .app{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:16px;
+      max-width:1000px;
+      margin:auto;
+      padding:20px;
+    }
+
+    /* CARD */
+    .card{
+      background: skyblue;
+      padding:20px;
+      border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.15);
+      text-align:center;
+    }
+
+    input{
+      width:20%;
+      padding:10px;
+      margin:6px 0;
+      border-radius:6px;
+      border:1px solid #ccc;
+    }
+
+    button{
+      padding:10px;
+      margin:6px;
+      border-radius:6px;
+      border:none;
+      background:#4CAF50;
+      color:white;
+      cursor:pointer;
+    }
+
+    button:hover{ opacity:0.9; }
+    #hourly{
+  display: flex;
+  gap: 14px;
+  margin-top: 12px;
+  padding-bottom: 5px;
+  overflow-x: auto;
+}
+
+
+    .weather-icon{
+      width:80px;
+    }
+
+    .temp{
+      font-size:28px;
+      font-weight:bold;
+    }
+
+    .desc{
+      text-transform:capitalize;
+      color:#555;
+    }
+
+    /* BACKGROUNDS */
+    .clear { background: linear-gradient(#56ccf2, #2f80ed); }
+    .clouds { background: linear-gradient(#bdc3c7, #2c3e50); }
+    .rain { background: linear-gradient(#4b79a1, #283e51); }
+    .snow { background: linear-gradient(#83a4d4, #b6fbff); }
+
+    /* FORECAST */
+    #forecast{
+      display:flex;
+      gap:10px;
+      overflow-x:auto;
+      justify-content: center;
+      
+    }
+
+    .forecast-day{
+      background:rgb(190, 189, 189);
+      padding:10px;
+      border-radius:10px;
+      min-width:80px;
+      text-align:center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+
+    .forecast-day img{
+      width:40px;
+    }
+    .hour-card{
+  background:rgb(190, 189, 189);
+  padding: 12px 10px;
+  border-radius: 12px;
+  min-width: 40px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.hour-card .time{
+  font-size: 13px;
+  opacity: 0.85;
+  margin-bottom: 6px;
+}
+
+.hour-card img{
+  width: 36px;
+  margin: 4px 0;
+}
+
+.hour-card .temp{
+  font-size: 15px;
+  font-weight: bold;
+}
+
+
+    /* DESKTOP LAYOUT */
+    @media (min-width:768px){
+      .app{
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .search-card,
+      .forecast-card{
+        grid-column: span 2;
+      }
+    }

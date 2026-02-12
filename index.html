@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weather App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+  <!-- SEARCH -->
+  <div class="card search-card">
+    <h2>🌦️ Weather App</h2>
+    <input type="text" id="place" placeholder="Enter city or village">
+    <br>
+    <button onclick="getWeatherByName()">Search</button>
+    <button onclick="getWeatherByLocation()">My Location</button>
+  </div>
+
+  <!-- CURRENT WEATHER -->
+  <div class="card" id="result"></div>
+
+  <!-- HOURLY / DAILY -->
+  <div class="card">
+    <button onclick="showHourly()">Hourly</button>
+    <div id="hourly"></div>
+  </div>
+
+  <!-- SUN INFO -->
+  <div class="card" id="sunCard"></div>
+
+  <!-- DETAILS -->
+  <div class="card" id="detailsCard"></div>
+
+  <!-- FORECAST -->
+  <div class="card forecast-card">
+    <h3>5-Day Forecast</h3>
+    <div id="forecast"></div>
+  </div>
+
+</div>
+
+<script src="script.js" defer></script>
+
+</body>
+</html>
