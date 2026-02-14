@@ -131,3 +131,77 @@ body{
         grid-column: span 2;
       }
     }
+/* MOBILE RESPONSIVE */
+@media (max-width: 480px){
+
+  body{
+    margin: 0;
+    padding: 10px;
+  }
+
+  .app{
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 0;
+  }
+
+  .card{
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+  }
+
+  h2{
+    font-size: 18px;
+  }
+
+  h3{
+    font-size: 16px;
+  }
+
+  .temp{
+    font-size: 22px;
+  }
+
+  input{
+    width: 90%;
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  button{
+    width: 100%;
+    font-size: 15px;
+    padding: 10px;
+    margin-top: 6px;
+  }
+
+  /* Hourly forecast scroll */
+  #hourly{
+    gap: 8px;
+    overflow-x: auto;
+  }
+
+  .hour-card{
+    min-width: 65px;
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  /* 5-day forecast scroll */
+  #forecast{
+    gap: 8px;
+    overflow-x: auto;
+  }
+
+  .forecast-day{
+    min-width: 65px;
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  .weather-icon{
+    width: 60px;
+  }
+
+}
