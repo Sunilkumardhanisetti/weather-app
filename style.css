@@ -1,207 +1,181 @@
+/* IMPORTANT GLOBAL FIX */
+*{
+  box-sizing: border-box;
+}
+
 body{
-      font-family: Arial, sans-serif;
-      background:#f4f6f8;
-      min-height:100vh;
-      margin:0;
-      transition: background 0.5s ease;
-    }
-
-    /* APP GRID */
-    .app{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap:16px;
-      max-width:1000px;
-      margin:auto;
-      padding:20px;
-    }
-
-    /* CARD */
-    .card{
-      background: skyblue;
-      padding:20px;
-      border-radius:12px;
-      box-shadow:0 4px 12px rgba(0,0,0,0.15);
-      text-align:center;
-    }
-
-    input{
-      width:20%;
-      padding:10px;
-      margin:6px 0;
-      border-radius:6px;
-      border:1px solid #ccc;
-    }
-
-    button{
-      padding:10px;
-      margin:6px;
-      border-radius:6px;
-      border:none;
-      background:#4CAF50;
-      color:white;
-      cursor:pointer;
-    }
-
-    button:hover{ opacity:0.9; }
-    #hourly{
-  display: flex;
-  gap: 14px;
-  margin-top: 12px;
-  padding-bottom: 5px;
-  overflow-x: auto;
+  font-family: Arial, sans-serif;
+  background:#f4f6f8;
+  min-height:100vh;
+  margin:0;
+  overflow-x:hidden; /* prevents horizontal scroll */
+  transition: background 0.5s ease;
 }
 
+/* APP GRID */
+.app{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:16px;
+  max-width:100%;
+  margin:auto;
+  padding:12px;
+}
 
-    .weather-icon{
-      width:80px;
-    }
+/* CARD */
+.card{
+  background: skyblue;
+  padding:16px;
+  border-radius:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.15);
+  text-align:center;
+  width:100%; /* full width */
+}
 
-    .temp{
-      font-size:28px;
-      font-weight:bold;
-    }
+/* INPUT */
+input{
+  width:100%; /* FIXED from 20% */
+  padding:10px;
+  margin:6px 0;
+  border-radius:6px;
+  border:1px solid #ccc;
+  font-size:16px;
+}
 
-    .desc{
-      text-transform:capitalize;
-      color:#555;
-    }
+/* BUTTON */
+button{
+  width:100%;
+  padding:10px;
+  margin-top:6px;
+  border-radius:6px;
+  border:none;
+  background:#4CAF50;
+  color:white;
+  cursor:pointer;
+}
 
-    /* BACKGROUNDS */
-    .clear { background: linear-gradient(#56ccf2, #2f80ed); }
-    .clouds { background: linear-gradient(#bdc3c7, #2c3e50); }
-    .rain { background: linear-gradient(#4b79a1, #283e51); }
-    .snow { background: linear-gradient(#83a4d4, #b6fbff); }
+button:hover{
+  opacity:0.9;
+}
 
-    /* FORECAST */
-    #forecast{
-      display:flex;
-      gap:10px;
-      overflow-x:auto;
-      justify-content: center;
-      
-    }
+/* HOURLY */
+#hourly{
+  display:flex;
+  gap:10px;
+  margin-top:12px;
+  overflow-x:auto;
+}
 
-    .forecast-day{
-      background:rgb(190, 189, 189);
-      padding:10px;
-      border-radius:10px;
-      min-width:80px;
-      text-align:center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-    }
-
-    .forecast-day img{
-      width:40px;
-    }
-    .hour-card{
+.hour-card{
   background:rgb(190, 189, 189);
-  padding: 12px 10px;
-  border-radius: 12px;
-  min-width: 40px;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-}
-
-.hour-card .time{
-  font-size: 13px;
-  opacity: 0.85;
-  margin-bottom: 6px;
+  padding:10px;
+  border-radius:10px;
+  min-width:65px;
+  text-align:center;
+  box-shadow:0 2px 6px rgba(0,0,0,0.3);
+  flex:0 0 auto;
 }
 
 .hour-card img{
-  width: 36px;
-  margin: 4px 0;
+  width:36px;
+}
+
+.hour-card .time{
+  font-size:13px;
 }
 
 .hour-card .temp{
-  font-size: 15px;
-  font-weight: bold;
+  font-size:15px;
+  font-weight:bold;
 }
 
+/* WEATHER INFO */
+.weather-icon{
+  width:80px;
+}
 
-    /* DESKTOP LAYOUT */
-    @media (min-width:768px){
-      .app{
-        grid-template-columns: 1fr 1fr;
-      }
+.temp{
+  font-size:28px;
+  font-weight:bold;
+}
 
-      .search-card,
-      .forecast-card{
-        grid-column: span 2;
-      }
-    }
-/* MOBILE RESPONSIVE */
-@media (max-width: 480px){
+.desc{
+  text-transform:capitalize;
+  color:#555;
+}
 
-  body{
-    margin: 0;
-    padding: 10px;
-  }
+/* BACKGROUNDS */
+.clear { background: linear-gradient(#56ccf2, #2f80ed); }
+.clouds { background: linear-gradient(#bdc3c7, #2c3e50); }
+.rain { background: linear-gradient(#4b79a1, #283e51); }
+.snow { background: linear-gradient(#83a4d4, #b6fbff); }
+
+/* FORECAST */
+#forecast{
+  display:flex;
+  gap:10px;
+  overflow-x:auto;
+}
+
+.forecast-day{
+  background:rgb(190, 189, 189);
+  padding:10px;
+  border-radius:10px;
+  min-width:65px;
+  text-align:center;
+  box-shadow:0 2px 6px rgba(0,0,0,0.3);
+  flex:0 0 auto;
+}
+
+.forecast-day img{
+  width:40px;
+}
+
+/* TABLET */
+@media (min-width:768px){
 
   .app{
-    grid-template-columns: 1fr;
-    gap: 12px;
-    padding: 0;
+    grid-template-columns: 1fr 1fr;
   }
 
+  .search-card,
+  .forecast-card{
+    grid-column: span 2;
+  }
+
+}
+
+/* DESKTOP LARGE */
+@media (min-width:1024px){
+
+  .app{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .search-card,
+  .forecast-card{
+    grid-column: span 3;
+  }
+
+}
+
+/* SMALL MOBILE */
+@media (max-width:480px){
+
   .card{
-    width: 90%;
-    padding: 14px;
-    border-radius: 10px;
+    padding:14px;
   }
 
   h2{
-    font-size: 18px;
-  }
-
-  h3{
-    font-size: 16px;
+    font-size:18px;
   }
 
   .temp{
-    font-size: 22px;
-  }
-
-  input{
-    width: 90%;
-    font-size: 16px;
-    padding: 10px;
-  }
-
-  button{
-    width: 100%;
-    font-size: 15px;
-    padding: 10px;
-    margin-top: 6px;
-  }
-
-  /* Hourly forecast scroll */
-  #hourly{
-    gap: 8px;
-    overflow-x: auto;
-  }
-
-  .hour-card{
-    min-width: 65px;
-    padding: 8px;
-    font-size: 13px;
-  }
-
-  /* 5-day forecast scroll */
-  #forecast{
-    gap: 8px;
-    overflow-x: auto;
-  }
-
-  .forecast-day{
-    min-width: 65px;
-    padding: 8px;
-    font-size: 13px;
+    font-size:22px;
   }
 
   .weather-icon{
-    width: 60px;
+    width:60px;
   }
 
 }
